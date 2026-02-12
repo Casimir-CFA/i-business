@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>iTech Business</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <span class="logo-text">iTech Business</span>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#accueil">Accueil</a>
+            <a href="#services">Services</a>
+            <a href="#produits">Produits</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="menu-toggle" id="menuToggle">☰</div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="accueil">
+        <div class="hero-content reveal">
+            <h1>🚀 Bienvenue chez 🚀 <br> iTech-Business</h1>
+            <p> iTech Business est une boutique en ligne spécialisée dans la vente d'ordinateurs,
+                d'accessoires informatiques et propose des solutions numériques adaptées à vos besoin</p>
+            <a href="#services" class="btn-primary">Explorer</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services reveal" id="services">
+        <h2>Nos Services</h2>
+        <div class="service-grid">
+            <div class="card"><h3>💻 Vente d'ordinateurs </h3> <br> 
+                <p>Nous proposons une large gamme d'ordinateurs adaptés à tous les besoins et budgets avec les accessoire
+                    s au besoin comme Souris, claviers... etc.</p></div>
+            <div class="card"> <h3>🌐Maintenace informatique</h3> Diagnostic, reparation et optimisation de votre ordinateurs. </div>
+            <div class="card"> <h3> Installation logiciels </h3> <p>Installations des systemes windows, Kali, Unbutu etc et de tous les logiciels dont vous avez besoins.
+            </p> </div>
+        </div>
+    </section>
+
+    <!-- PRODUITS -->
+    
+
+    <section class="produits reveal" id="produits">
+        <h2>Nos Produits</h2>
+        <div class="produit-grid">
+            <div class="produit-card">Laptop Pro</div>
+            <div class="produit-card">PC Gamer</div>
+            <div class="produit-card">Accessoires</div>
+        </div>
+    </section>
+    <!-- GALERIE PRODUITS -->
+
+    <section id="apercu">
+        <h2>Aperçu de nos ordinateurs portables</h2>
+        <p class="apercu-text">
+            Voici quelques exemples d’ordinateurs portables que nous proposons.
+            Les modèles peuvent varier selon la disponibilité.
+        </p>
+
+        <div class="laptop-grid">
+            <img src="images/laptops/1.jpg" alt="Ordinateur portable 1">
+            <img src="images/laptops/2.jpg" alt="Ordinateur portable 2">
+            <img src="images/laptops/3.jpg" alt="Ordinateur portable 3">
+            <img src="images/laptops/4.jpg" alt="Ordinateur portable 4">
+            <img src="images/laptops/5.jpg" alt="Ordinateur portable 5">
+            <img src="images/laptops/6.jpg" alt="Ordinateur portable 6">
+            <img src="images/laptops/7.jpg" alt="Ordinateur portable 7">
+            <img src="images/laptops/8.jpg" alt="Ordinateur portable 8">
+        </div>
+    </section>
+    
+
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p>Nous sommes là pour répondre à vos questions et vous guider.</p>
+    
+            <div class="contact-grid">
+                <!-- Email -->
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:contact@itechbusiness.com">contact@itechbusiness.com</a>
+                </div>
+    
+                <!-- Téléphone -->
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+22966109277">+229 66 10 92 77</a>
+                </div>
+    
+                <!-- WhatsApp -->
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/22966109277" target="_blank">Nous envoyer un message</a>
+                </div>
+    
+                <!-- Facebook -->
+                <div class="contact-item">
+                    <i class="fab fa-facebook-f"></i>
+                    <a href="https://facebook.com/TON_PROFIL" target="_blank">Suivez-nous sur Facebook</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <footer>
+        <p>© 2026 iTech Business – Tous droits réservés</p>
+        <img src="images/logo.png" alt="Logo iTech Business" class="logo-footer">
+    </footer>
+
+    <!-- BOUTON WHATSAPP -->
+    <a href="https://wa.me/22966109277" class="whatsapp-btn" target="_blank">
+        💬
+    </a>
+
+<script>
+    // MENU MOBILE
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // ANIMATION AU SCROLL
+    function revealOnScroll() {
+        const reveals = document.querySelectorAll(".reveal");
+
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const visible = 100;
+
+            if (elementTop < windowHeight - visible) {
+                el.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>
+

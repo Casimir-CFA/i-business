@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ================== FOND ANIMÉ ================== */
+
+body {
+    background: linear-gradient(-45deg, #113c8b, #72101d, #0f2027, #e4451d);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* ================== CONTAINER GLOBAL ================== */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ================== NAVBAR ================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffccd5;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ================== HERO ================== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    background: white;
+    color: #6a0f1b;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================== SECTIONS ================== */
+
+section {
+    padding: 100px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+/* ================== SERVICES ================== */
+
+.service-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ================== GALERIE ================== */
+
+#apercu {
+    text-align: center;
+}
+
+.apercu-text {
+    max-width: 700px;
+    margin: 10px auto 30px;
+    color: #444;
+}
+
+.laptop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.laptop-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.596);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.laptop-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ================== SECTION CONTACT ================== */
+
+.contact {
+    padding: 80px 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 60px 0;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* GRID CONTACT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* ITEM CONTACT */
+.contact-item {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    padding: 25px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ICONES */
+.contact-item i {
+    font-size: 28px;
+    color: #ffccd5;  /* couleur principale */
+    margin-bottom: 15px;
+    display: block;
+    transition: 0.3s;
+}
+
+.contact-item:hover i {
+    color: #7b1e3b; /* effet rouge vin au hover */
+}
+
+/* LIENS */
+.contact-item a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #ffccd5;
+}
+
+
+
+
+/* ================== WHATSAPP ================== */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 24px;
+    padding: 15px 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ================== FOOTER ================== */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+}
+
+/* ================== TABLETTE ================== */
+
+@media(max-width:1024px){
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galerie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* ================== MOBILE ================== */
+
+@media(max-width:768px){
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .service-grid,
+    .galerie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        padding: 20px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    
+/* MOBILE */
+@media(max-width:768px){
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact h2 {
+        font-size: 24px;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+}
+
+
+    .whatsapp {
+        display: inline-block;
+        background: #25D366;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+}
+.logo-footer {
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: white;
+    margin-top: 10px;
+    color: white;
+}
+
